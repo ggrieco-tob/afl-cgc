@@ -136,8 +136,8 @@ echo "[*] Configuring QEMU for $CPU_TARGET..."
 cd qemu-2.3.0 || exit 1
 
 CFLAGS="-O3" ./configure --disable-system --enable-linux-user \
-  --enable-guest-base --disable-gtk --disable-sdl --disable-vnc \
-  --target-list="${CPU_TARGET}-linux-user" || exit 1
+  --enable-guest-base --disable-gtk --disable-sdl --disable-docs --disable-vnc \
+  --target-list="${CPU_TARGET}-linux-user" --python=python2 || exit 1
 
 echo "[+] Configuration complete."
 
